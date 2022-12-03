@@ -1,5 +1,6 @@
 import { Day01 } from './solutions/day01';
 import { Day02 } from './solutions/day02';
+import { Day03 } from './solutions/day03';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -25,5 +26,21 @@ describe('solutions', () => {
 
         const part2Result = new Day02().part2(input);
         expect(part2Result).toBe(12989);
+    });
+
+    it('day03', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day03_example.txt');
+        const part1ExampleResult = new Day03().part1(exampleInput);
+        expect(part1ExampleResult).toBe(157);
+
+        const input = InputReader.readFile('src/inputs/day03.txt');
+        const part1Result = new Day03().part1(input);
+        expect(part1Result).toBe(7727);
+
+        const part2ExampleResult = new Day03().part2(exampleInput);
+        expect(part2ExampleResult).toBe(70);
+
+        const part2Result = new Day03().part2(input);
+        expect(part2Result).toBe(2609);
     });
 });

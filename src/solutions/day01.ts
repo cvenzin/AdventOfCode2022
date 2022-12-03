@@ -8,6 +8,6 @@ export class Day01 {
     }
 
     private getSortedCaloriesPerElve(input: string) {
-        return input.split(/\n{2,}/g).map(n => n.split('\n').map(nn => Number(nn))).map(n => n.reduce((a, b) => a + b)).sort((a, b) => b - a);
+        return input.split(/\n{2,}/g).map(n => n.split('\n').map(n => Number(n))).map(n => n.reduce((a, b) => a + b)).sort((a, b) => b - a);
     }
 }
