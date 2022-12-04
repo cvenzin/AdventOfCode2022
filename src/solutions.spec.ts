@@ -1,46 +1,40 @@
 import { Day01 } from './solutions/day01';
 import { Day02 } from './solutions/day02';
 import { Day03 } from './solutions/day03';
+import { Day04 } from './solutions/day04';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
     it('day01', () => {
         const input = InputReader.readFile('src/inputs/day01.txt');
-        const part1Result = new Day01().part1(input);
-        expect(part1Result).toBe(66719);
-        const part2Result = new Day01().part2(input);
-        expect(part2Result).toBe(198551);
+        expect(new Day01().part1(input)).toBe(66719);
+        expect(new Day01().part2(input)).toBe(198551);
     });
 
     it('day02', () => {
         const exampleInput = InputReader.readFile('src/inputs/day02_example.txt');
-        const part1ExampleResult = new Day02().part1(exampleInput);
-        expect(part1ExampleResult).toBe(15);
-        
         const input = InputReader.readFile('src/inputs/day02.txt');
-        const part1Result = new Day02().part1(input);
-        expect(part1Result).toBe(15691);
-
-        const part2ExampleResult = new Day02().part2(exampleInput);
-        expect(part2ExampleResult).toBe(12);
-
-        const part2Result = new Day02().part2(input);
-        expect(part2Result).toBe(12989);
+        expect(new Day02().part1(exampleInput)).toBe(15);
+        expect(new Day02().part1(input)).toBe(15691);
+        expect(new Day02().part2(exampleInput)).toBe(12);
+        expect(new Day02().part2(input)).toBe(12989);
     });
 
     it('day03', () => {
         const exampleInput = InputReader.readFile('src/inputs/day03_example.txt');
-        const part1ExampleResult = new Day03().part1(exampleInput);
-        expect(part1ExampleResult).toBe(157);
-
         const input = InputReader.readFile('src/inputs/day03.txt');
-        const part1Result = new Day03().part1(input);
-        expect(part1Result).toBe(7727);
+        expect(new Day03().part1(exampleInput)).toBe(157);
+        expect(new Day03().part1(input)).toBe(7727);
+        expect(new Day03().part2(exampleInput)).toBe(70);
+        expect(new Day03().part2(input)).toBe(2609);
+    });
 
-        const part2ExampleResult = new Day03().part2(exampleInput);
-        expect(part2ExampleResult).toBe(70);
-
-        const part2Result = new Day03().part2(input);
-        expect(part2Result).toBe(2609);
+    it('day04', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day04_example.txt');
+        const input = InputReader.readFile('src/inputs/day04.txt');
+        expect(new Day04().part1(exampleInput)).toBe(2);
+        expect(new Day04().part1(input)).toBe(441);
+        expect(new Day04().part2(exampleInput)).toBe(4);
+        expect(new Day04().part2(input)).toBe(861);
     });
 });
