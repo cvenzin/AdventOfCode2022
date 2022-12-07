@@ -4,6 +4,7 @@ import { Day03 } from './solutions/day03';
 import { Day04 } from './solutions/day04';
 import { Day05 } from './solutions/day05';
 import { Day06 } from './solutions/day06';
+import { Day07 } from './solutions/day07';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -56,5 +57,14 @@ describe('solutions', () => {
         expect(new Day06().part1(input)).toBe(1953);
         expect(new Day06().part2(exampleInput)).toBe(19);
         expect(new Day06().part2(input)).toBe(2301);
+    });
+
+    it('day07', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day07_example.txt');
+        const input = InputReader.readFile('src/inputs/day07.txt');
+        expect(new Day07().part1(exampleInput)).toBe(95437);
+        expect(new Day07().part1(input)).toBe(1297159);
+        expect(new Day07().part2(exampleInput)).toBe(24933642);
+        expect(new Day07().part2(input)).toBe(3866390);
     });
 });
