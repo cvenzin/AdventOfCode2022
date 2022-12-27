@@ -8,6 +8,7 @@ import { Day07 } from './solutions/day07';
 import { Day08 } from './solutions/day08';
 import { Day09 } from './solutions/day09';
 import { Day10 } from './solutions/day10';
+import { Day11 } from './solutions/day11';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -112,5 +113,14 @@ describe('solutions', () => {
 #....#..#.#....#..#.#..#.#..#.#..#.#....
 #....#..#.#.....##...##..###..#..#.#....
 `);
+    });
+
+    it('day11', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day11_example.txt');
+        const input = InputReader.readFile('src/inputs/day11.txt');
+        expect(new Day11().part1(exampleInput)).toBe(10605);
+        expect(new Day11().part1(input)).toBe(57348);
+        expect(new Day11().part2(exampleInput)).toBe(2713310158);
+        expect(new Day11().part2(input)).toBe(14106266886);
     });
 });
