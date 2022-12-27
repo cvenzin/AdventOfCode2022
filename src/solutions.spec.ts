@@ -7,6 +7,7 @@ import { Day06 } from './solutions/day06';
 import { Day07 } from './solutions/day07';
 import { Day08 } from './solutions/day08';
 import { Day09 } from './solutions/day09';
+import { Day10 } from './solutions/day10';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -88,5 +89,28 @@ describe('solutions', () => {
         expect(new Day09().part2(exampleInput)).toBe(1);
         expect(new Day09().part2(exampleInput2)).toBe(36);
         expect(new Day09().part2(input)).toBe(2273);
+    });
+
+    it('day10', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day10_example.txt');
+        const input = InputReader.readFile('src/inputs/day10.txt');
+        expect(new Day10().part1(exampleInput)).toBe(13140);
+        expect(new Day10().part1(input)).toBe(14340);
+        expect(new Day10().part2(exampleInput)).toBe(
+            `##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....
+`);
+        expect(new Day10().part2(input)).toBe(
+            `###...##..###....##..##..###..#..#.###..
+#..#.#..#.#..#....#.#..#.#..#.#..#.#..#.
+#..#.#..#.#..#....#.#....###..####.#..#.
+###..####.###.....#.#....#..#.#..#.###..
+#....#..#.#....#..#.#..#.#..#.#..#.#....
+#....#..#.#.....##...##..###..#..#.#....
+`);
     });
 });
