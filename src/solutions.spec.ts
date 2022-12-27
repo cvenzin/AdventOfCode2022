@@ -5,6 +5,8 @@ import { Day04 } from './solutions/day04';
 import { Day05 } from './solutions/day05';
 import { Day06 } from './solutions/day06';
 import { Day07 } from './solutions/day07';
+import { Day08 } from './solutions/day08';
+import { Day09 } from './solutions/day09';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -66,5 +68,25 @@ describe('solutions', () => {
         expect(new Day07().part1(input)).toBe(1297159);
         expect(new Day07().part2(exampleInput)).toBe(24933642);
         expect(new Day07().part2(input)).toBe(3866390);
+    });
+
+    it('day08', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day08_example.txt');
+        const input = InputReader.readFile('src/inputs/day08.txt');
+        expect(new Day08().part1(exampleInput)).toBe(21);
+        expect(new Day08().part1(input)).toBe(1794);
+        expect(new Day08().part2(exampleInput)).toBe(8);
+        expect(new Day08().part2(input)).toBe(199272);
+    });
+
+    it('day09', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day09_example.txt');
+        const exampleInput2 = InputReader.readFile('src/inputs/day09_example2.txt');
+        const input = InputReader.readFile('src/inputs/day09.txt');
+        expect(new Day09().part1(exampleInput)).toBe(13);
+        expect(new Day09().part1(input)).toBe(6026);
+        expect(new Day09().part2(exampleInput)).toBe(1);
+        expect(new Day09().part2(exampleInput2)).toBe(36);
+        expect(new Day09().part2(input)).toBe(2273);
     });
 });
