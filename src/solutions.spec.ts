@@ -9,6 +9,7 @@ import { Day08 } from './solutions/day08';
 import { Day09 } from './solutions/day09';
 import { Day10 } from './solutions/day10';
 import { Day11 } from './solutions/day11';
+import { Day12 } from './solutions/day12';
 import { InputReader } from './utils/inputReader';
 
 describe('solutions', () => {
@@ -122,5 +123,14 @@ describe('solutions', () => {
         expect(new Day11().part1(input)).toBe(57348);
         expect(new Day11().part2(exampleInput)).toBe(2713310158);
         expect(new Day11().part2(input)).toBe(14106266886);
+    });
+
+    it('day12', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day12_example.txt');
+        const input = InputReader.readFile('src/inputs/day12.txt');
+        expect(new Day12().part1(exampleInput)).toBe(31);
+        expect(new Day12().part1(input)).toBe(484);
+        expect(new Day12().part2(exampleInput)).toBe(29);
+        expect(new Day12().part2(input)).toBe(478);
     });
 });
