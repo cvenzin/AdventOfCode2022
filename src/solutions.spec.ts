@@ -11,6 +11,7 @@ import { Day10 } from './solutions/day10';
 import { Day11 } from './solutions/day11';
 import { Day12 } from './solutions/day12';
 import { Day13 } from './solutions/day13';
+import { Day14 } from './solutions/day14';
 import { Day18 } from './solutions/day18';
 import { Day20 } from './solutions/day20';
 import { InputReader } from './utils/inputReader';
@@ -144,6 +145,15 @@ describe('solutions', () => {
         expect(new Day13().part1(input)).toBe(6070);
         expect(new Day13().part2(exampleInput)).toBe(140);
         expect(new Day13().part2(input)).toBe(20758);
+    });
+
+    it('day14', () => {
+        const exampleInput = InputReader.readFile('src/inputs/day14_example.txt');
+        const input = InputReader.readFile('src/inputs/day14.txt');
+        expect(new Day14().part1(exampleInput)).toBe(24);
+        expect(new Day14().part1(input)).toBe(715);
+        expect(new Day14().part2(exampleInput)).toBe(93);
+        expect(new Day14().part2(input)).toBe(25248);
     });
 
     it('day18', () => {
